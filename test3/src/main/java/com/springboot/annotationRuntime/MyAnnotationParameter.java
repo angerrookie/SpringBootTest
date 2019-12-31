@@ -1,4 +1,4 @@
-package com.springboot.annotation;
+package com.springboot.annotationRuntime;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -10,8 +10,8 @@ import java.lang.annotation.Target;
  * @description 自定义注解
  * @date 2019/12/31
  */
-@Target(ElementType.METHOD)
+@Target(ElementType.PARAMETER)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface MyAnnotationMethod {
-    String value() default "自定义方法注解";
+public @interface MyAnnotationParameter {
+    String value() default "自定义参数注解";
 }
