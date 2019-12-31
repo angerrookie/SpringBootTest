@@ -2,6 +2,8 @@ package com.springboot.controller;
 
 import com.springboot.pojo.User;
 import com.springboot.service.UserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,12 +23,19 @@ public class UserController {
     @Qualifier("service")
     private UserService userService;
 
+    private static Logger logger = LoggerFactory.getLogger(UserController.class);
+
     @RequestMapping(value = "/all",method = RequestMethod.GET)
     public String findAll(){
         List<User> list = userService.findAll();
         for (User user : list) {
             System.out.println(user.getUserId()+"---"+user.getUserName());
         }
+        logger.trace("trace");
+        logger.info("info");
+        logger.debug("debug");
+        logger.warn("warn");
+        logger.error("error");
         return "findAll";
     }
     @RequestMapping(value = "/find",method = RequestMethod.GET)
