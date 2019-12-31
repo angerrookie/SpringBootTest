@@ -10,8 +10,8 @@ import java.lang.annotation.Target;
  * @description 自定义注解
  * @date 2019/12/31
  */
-@Target(ElementType.FIELD)
+@Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface MyAnnotation {
-    String value() default "自定义";
+public @interface MyAnnotationMethod {
+    String value() default "自定义方法注解";
 }
