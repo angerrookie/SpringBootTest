@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -37,7 +38,7 @@ public class UserController {
         logger.info("info");
         logger.debug("debug");
         logger.warn("warn");
-        logger.error("error");
+        logger.error(".....");
         return "findAll";
     }
     @RequestMapping(value = "/find",method = RequestMethod.GET)
