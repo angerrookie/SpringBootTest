@@ -13,14 +13,15 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class UserController {
-    private static final Logger logger = LoggerFactory.getLogger(UserController.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
     @RequestMapping(value = "/test4",method = RequestMethod.GET)
     public String test(){
-        logger.trace("trace");
-        logger.debug("debug");
-        logger.info("info");
-        logger.warn("warn");
-        logger.error("error");
+        LOGGER.trace("trace");
+        LOGGER.debug("debug");
+        LOGGER.info("info");
+        LOGGER.warn("warn");
+        LOGGER.error("error");
+        System.out.println("----------");
         return "log4j";
     }
 }
