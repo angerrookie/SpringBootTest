@@ -23,7 +23,7 @@ public class UserController {
     @Qualifier("service")
     private UserService userService;
 
-    private static Logger logger = LoggerFactory.getLogger(UserController.class);
+    private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @RequestMapping(value = "/all",method = RequestMethod.GET)
     public String findAll(){
