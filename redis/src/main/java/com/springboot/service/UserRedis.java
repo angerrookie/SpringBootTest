@@ -79,7 +79,7 @@ public class UserRedis  {
      * @Param: [key]
      * @Return: void
      * @Author: Administrator
-     * @Date: 2020/1/3 15:54
+     * @Date: 2020/1/3 16:43
      */
     public void delete(String key){
         redisTemplate.opsForValue().getOperations().delete(key);
